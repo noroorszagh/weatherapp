@@ -3,10 +3,6 @@ import { useState } from "react";
 import "./App.css";
 import { motion } from "framer-motion";
 
-// This should already be declared in your API file
-
-
-
 const App = () => {
  
   const [query, setQuery] = useState("")
