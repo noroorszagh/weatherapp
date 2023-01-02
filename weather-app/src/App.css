@@ -12,7 +12,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     padding-top: 2rem;
 }
 
@@ -22,11 +22,21 @@ body{
 }
 @media screen and (max-width: 1080px) {
     .container{
+        height: 100%;
         width: 100%;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card{
+        margin: 0 auto;
+        background: #a9cef0;
     }
 
     body{
-        background-image: url(images/anubhav-rana-x2LStfRm7g0-unsplash.jpg);
+        background-image: url(images/gleb-makarov-Ht29K0hq7dg-unsplash.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -58,37 +68,55 @@ body{
 
 
 h1{
-    color: #0528F2;
-    font-size: 40px;
+    color: #f2f2f2;
+    font-size: 30px;
     word-break: break-all;
-    padding: 1.5rem 0;
 }
 
 .card{
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+    margin: 2rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column: span 6 / span 6;
+    column-gap: 2rem;
     flex-direction: column;
-    align-items: center;
-    position: relative;
+    align-items: flex-end;
     margin: 0 auto;
     border-radius: 15px;
-    background: #FFF;
-    width: 360px;
+    background: #a9cef0;
+    width: fit-content;
+    position: relative;
 }
 
-.card.hide {display: none;}
+.card.hide {
+    display: none;
+}
 
-.card h1 {}
 .card h2 {line-height: 250%;}
 
-.oblaky{
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-40%, -40%);
+.section_2{
+    color: #F2F2F2;
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
 }
 
-.oblaky svg {
-    filter: drop-shadow(0 -1mm 1mm #0528F2);
+.temp{
+    font-size: 40px;
+    color:#F2D06B;
+}
+
+.oblaky{
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    position: absolute;
+    top: 50px;
+    right: 10;
+}
+
+.weather_info{
+    color: #f2f2f2;
 }
