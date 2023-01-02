@@ -28,11 +28,14 @@ body{
         justify-items: center;
         justify-content: center;
         flex-direction: column;
+        padding: 1rem;
     }
 
     .card{
-        margin: 0 auto;
-        background: #a9cef0;
+        display: flex;
+        align-content: center;
+        margin: 0 auto !important;
+        
     }
 
     body{
@@ -74,7 +77,6 @@ h1{
 }
 
 .card{
-    margin: 2rem;
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -93,12 +95,16 @@ h1{
     display: none;
 }
 
-.card h2 {line-height: 250%;}
+.card h2 {
+    line-height: 200%;
+}
 
 .section_2{
     color: #F2F2F2;
     font-size: 9px;
     display: flex;
+    text-align: center;
+    justify-content: center;
     flex-direction: column;
     align-content: flex-end;
 }
@@ -111,10 +117,7 @@ h1{
 .oblaky{
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
-    position: absolute;
-    top: 50px;
-    right: 10;
+
 }
 
 .weather_info{
