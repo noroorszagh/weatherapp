@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100vh;
+}
+body{
+    margin: auto;
+    background-image: url(images/stefan-lehner-ng1Kr0r-uIA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    backdrop-filter: blur(5px);
+    padding-top: 2rem;
+}
+
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1080px) {
+    .container{
+        width: 100%;
+    }
+
+    body{
+        background-image: url(images/anubhav-rana-x2LStfRm7g0-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+}
+.search{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.search input{
+    cursor: pointer;
+    width: 360px;
+    padding: 1rem;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 0px 24px 0px rgba(92,90,90,0.15);
+-webkit-box-shadow: 0px 0px 24px 0px rgba(92,90,90,0.15);
+-moz-box-shadow: 0px 0px 24px 0px rgba(92,90,90,0.15);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+
+h1{
+    color: #0528F2;
+    font-size: 40px;
+    word-break: break-all;
+    padding: 1.5rem 0;
+}
+
+.card{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 15px;
+    background: #FFF;
+    width: 360px;
+}
+
+.card.hide {display: none;}
+
+.card h1 {}
+.card h2 {line-height: 250%;}
+
+.oblaky{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-40%, -40%);
+}
+
+.oblaky svg {
+    filter: drop-shadow(0 -1mm 1mm #0528F2);
+}
