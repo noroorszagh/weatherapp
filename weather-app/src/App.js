@@ -12,7 +12,7 @@ const App = () => {
 
   const search = evt => {
     if(evt.key === "Enter") {
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=97d93152ba45d6ccf02fe6861a6c2f9e`)
+      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&lang=sk&units=metric&appid=97d93152ba45d6ccf02fe6861a6c2f9e`)
       .then(res => res.json())
       .then(result => {
         setWeather(result);
@@ -21,16 +21,6 @@ const App = () => {
       } )
     }
   }
-
-  //const searchLocation = (event) => {
-    //if (event.keyCode === 13) {
-      //axios.get(url).then((response) => {
-        //setData(response.data)
-        //console.log(response.data)
-      //});
-      
-    //}
-  //};
 
   let className = 'card hide';
   if (weather.main) {
@@ -41,8 +31,6 @@ const App = () => {
   if (weather.main && weather.weather[0].icon){
     imgUrl += `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
   }
-  
-
   
   return (
     <div className="container">
@@ -78,11 +66,11 @@ const App = () => {
           </div>
 
           <div className="feels_like">
-            {weather.main ? <h2>Feel temperature: {weather.main.feels_like.toFixed()}℃</h2> : null}
+            {weather.main ? <h2>Pocitovo: {weather.main.feels_like.toFixed()}℃</h2> : null}
           </div>
 
           <div className="wind_speed">
-            {weather.main ? <h2>Wind speed: {weather.wind.speed} m/s</h2> : null}
+            {weather.main ? <h2>Rýchlosť vetra: {weather.wind.speed} m/s</h2> : null}
           </div>
         </div>
       </motion.div>
